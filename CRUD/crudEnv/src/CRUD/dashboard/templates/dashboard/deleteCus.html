@@ -1,0 +1,9 @@
+{% extends 'dashboard/base.html'%}
+{% block main-content%}
+<p>are you sure you wanna delete??{{item.FirstName}}</p>
+<form method="POST" action={% url 'deleteCustomer' item.id %}>
+    {% csrf_token %}
+    <a href={% url 'homepage' %}>Cancel</a>
+    <input type="submit" name="confirm">
+</form>
+{% endblock %}

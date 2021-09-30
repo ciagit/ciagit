@@ -1,0 +1,8 @@
+{% extends 'dashboard/base.html' %}
+{% block main-content %}
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
