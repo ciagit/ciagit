@@ -1,0 +1,21 @@
+{% extends 'homepage/base.html'%}
+{% block main_content %}
+{% load static %}
+<link href={% static "css/styles.css" %} rel="stylesheet">
+<table class="contact-list">
+    <tr>
+        <th>Name</th>
+        <th>e-mail</th>
+        <th>contact no</th>
+        <th>message</th>
+    </tr>
+    {% for list in newMessage%}
+    <tr>
+        <th>{{list.name}}</th>
+        <th>{{list.email}}</th>
+        <th>{{list.contact_no}}</th>
+        <th>{{list.message}}</th>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

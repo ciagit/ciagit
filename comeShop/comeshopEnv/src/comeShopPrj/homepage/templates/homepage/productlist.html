@@ -1,0 +1,6 @@
+{% extends 'homepage/base.html' %}
+{% block main_content %}
+  {% for p in product %}
+  {{p.item_name}}
+  {% endfor %}
+{% endblock %}

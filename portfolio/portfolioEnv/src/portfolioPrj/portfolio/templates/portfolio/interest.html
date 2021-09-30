@@ -1,0 +1,12 @@
+{% extends 'portfolio/base.html'%}
+{% block main_content%}
+<section class="resume-section" id="interests">
+    
+    <div class="resume-section-content">
+        <h2 class="mb-5">Interests</h2>
+        {% for interest in inte %}
+        <p class="mb-0">{{interest.hobbies}},{{interest.hobbiesDes}}</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

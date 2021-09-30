@@ -1,0 +1,13 @@
+{% extends 'homepage/base.html' %}
+{% block main_content %}
+
+        <form class="contactContainer" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            Product Name: <input type="text" name="p_name"><br>
+            Product Price: <input type="text" name="p_price"><br>
+            Product Description: <textarea rows="3" cols="3" name="p_des"></textarea><br>
+            Image: <input type="file" name="p_image"><br>
+            <input type="submit" value="send">
+        </form>
+
+{% endblock %}

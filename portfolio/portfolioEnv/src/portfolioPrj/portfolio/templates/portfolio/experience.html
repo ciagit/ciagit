@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html'%}
+{% block main_content%}
+<section class="resume-section" id="experience">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Experience</h2>
+        {% for experience in exp%}
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">{{experience.workPosition}}</h3>
+                <!-- <div class="subheading mb-3">Intelitec Solutions</div> -->
+                <p>{{experience.workDescription}}</p>
+            </div>
+        <div class="flex-shrink-0"><span class="text-primary">{{experience.workDateFrom}}-{{experience.workDateTo}}</span></div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
